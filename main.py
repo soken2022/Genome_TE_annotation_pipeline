@@ -1,6 +1,7 @@
 
 from src.parser import read_fasta, parse_gff
 from src.analysis import strand_specific_composition
+from src.analysis import strand_specific_composition, plot_strand_composition
 
 def main():
     fasta_path = "data/genome.fna"
@@ -11,6 +12,7 @@ def main():
 
     result = strand_specific_composition(genome_seq, features)
     result.to_csv("output/strand_composition.csv")
+    plot_strand_composition(result)
 
     print(result)
 
