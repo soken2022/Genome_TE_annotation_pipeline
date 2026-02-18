@@ -4,8 +4,8 @@ from src.analysis import strand_specific_composition
 from src.analysis import strand_specific_composition, plot_strand_composition
 
 def main():
-    fasta_path = "data/genome.fna"
-    gff_path = "data/genome.gff"
+    fasta_path = "C:\Genomics\Genome_TE_annotation_pipeline\data\GCF_000005845.2_ASM584v2_genomic.fna"
+    gff_path = "C:\Genomics\Genome_TE_annotation_pipeline\data\genomic.gff"
 
     genome_seq = read_fasta(fasta_path)
     features = parse_gff(gff_path)
