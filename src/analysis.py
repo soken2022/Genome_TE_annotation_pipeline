@@ -31,3 +31,20 @@ def strand_specific_composition(genome_seq, features):
         "Plus": plus_comp,
         "Minus": minus_comp
     })
+
+
+import matplotlib.pyplot as plt
+
+def plot_strand_composition(df, output_path="output/strand_composition_plot.png"):
+    """
+    Generates a bar plot comparing nucleotide composition in + and - strands.
+    """
+    df.T.plot(kind="bar")
+    plt.ylabel("Proportion")
+    plt.title("Strand-Specific Nucleotide Composition")
+    plt.xticks(rotation=0)
+    plt.tight_layout()
+    plt.savefig(output_path)
+    plt.close()
+
+
